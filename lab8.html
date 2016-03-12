@@ -6,36 +6,45 @@
    <script src="lab8.js" defer></script>
 </head>
 <body>
-   <h2>Tea House</h2> 
+   <h1>Tea House</h2> 
+  
    Tea 
-   <select>
+   <select autofocus id="teaType">
       <option value="black">Black</option>
       <option value="green">Green</option>
       <option value="red">Red</option>
    </select>
-   <br><br>Topping
-   <select>
-      <option value="grassJelly">Grass Jelly</option>
-      <option value="coconut">Coconut</option>
-      <option value="pearls">Pearls</option>
-      <option value="mangoStars">Mango Stars</option>
+   <br><br>
+
+   Topping
+   <select id="topping">
+      <option>Grass Jelly</option>
+      <option>Coconut</option>
+      <option>Pearls</option>
+      <option>Mango Stars</option>
    </select>
-   <br>
-   <input id="addTopping" type="button" value="Add Topping">
-   <input id="removeToppings" type="button" value="Remove Toppings">
-   <br><br>Current Toppings:<br> 
-   <p id="toppingOptionsy"></p>
-   <br>Milk 
-   <select>
+   <p> 
+   <input id="addTopping" type="button" value="Add Topping" onclick="addTopping()">
+   <input id="removeToppings" type="button" value="Remove Toppings" onclick="removeToppings()">
+   </p><br>
+   
+   Current Toppings:
+   <p id="currentToppings"></p>
+
+   Milk 
+   <select onchange="milk()">
       <option value="yes">Yes</option>
       <option value="no">No</option>
    </select>
    <br><br>
-   <input id="calculatePrice" type="button" value="Calculate Price"> 
-   <br>Total Price:<br>
-   <div id="totalPrice"></div>
+
+   <input id="calculatePrice" type="button" value="Calculate Price" onclick="calculateTotalPrice()"> 
+   <br> 
+   Total Price:
    <br>
    <div id="totalPrice"></div>
+   <br>
+
 </body>
 </html>
 
