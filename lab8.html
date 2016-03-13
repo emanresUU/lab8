@@ -24,21 +24,21 @@
       <option>Mango Stars</option>
    </select>
    <p> 
-   <input id="addTopping" type="button" value="Add Topping" onclick="addTopping()">
-   <input id="removeToppings" type="button" value="Remove Toppings" onclick="removeToppings()">
+   <input type="button" value="Add Topping" onclick="addTopping()">
+   <input type="button" value="Remove Toppings" onclick="removeToppings()">
    </p><br>
    
    Current Toppings:
    <p><ul id="currentToppings"></ul></p>
 
    Milk 
-   <select onchange="milk()">
+   <select id="milk">
       <option>Yes</option>
       <option>No</option>
    </select>
    <br><br>
 
-   <input id="calculatePrice" type="button" value="Calculate Price" onclick="calculateTotalPrice()"> 
+   <input type="button" value="Calculate Price" onclick="calculateTotalPrice()"> 
    <br> 
    Total Price:
    <br>
