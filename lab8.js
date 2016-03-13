@@ -1,5 +1,6 @@
 var toppingsArray = [];
 
+
 function addTopping() {
 	"use strict";  
 	var topping = document.getElementById("topping").value;
@@ -17,6 +18,7 @@ function addTopping() {
 	}
 }
 
+
 function removeToppings() {
 	"use strict";  
 	toppingsArray.length = 0;
@@ -24,27 +26,17 @@ function removeToppings() {
 	topping.innerHTML = "";
 }
 
+
 function calculateTotalPrice() {
 	"use strict";
-	document.getElementById("totalPrice").innerHTML = "$ " + 
-		(calculateToppingsPrice() + calculateTeaPrice() + calculateMilkPrice()); 
+	document.getElementById("totalPrice").innerHTML = "$ " +
+		(calculateToppingsPrice() + calculateTeaPrice() + calculateMilkPrice());
 }
-
-function calculateMilkPrice() {
-	"use strict";
-	var milk = document.getElementById("milk").value;
-	var milkPrice = 0;
-	if (milk === "Yes") {
-		milkPrice = 1.00;
-	}
-	return milkPrice;
-}
-
 
 
 function calculateTeaPrice() {
 	"use strict";
-	var teaPrice = 0; 
+	var teaPrice = 0;
 	var tea = document.getElementById("teaType").value;
 	if (tea === "Black") {
 		teaPrice = 2.50;
@@ -84,5 +76,13 @@ function calculateToppingsPrice() {
 	return toppingsPrice;
 }
 
-//	var tea = document.getElementById("teaType");
-//	var milk = document.getElementById("milk");
+
+function calculateMilkPrice() {
+	"use strict";
+	var milk = document.getElementById("milk").value;
+	var milkPrice = 0;
+	if (milk === "Yes") {
+		milkPrice = 1.00;
+	}
+	return milkPrice;
+}

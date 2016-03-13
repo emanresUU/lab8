@@ -1,3 +1,2 @@
 # lab8
-
-junk
+This is a project for a computer science class.
